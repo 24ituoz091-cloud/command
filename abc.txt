@@ -1,0 +1,122 @@
+Initialize Git
+git init
+git config --global user.name "Aksh"
+git config --global user.email "24ituoz091@ddu.ac.in"
+git status
+git add p1.py
+git commit -m "Initial commit"
+git log --oneline
+Set-Content p1.py 'print("Hello Students - Updated")'
+git diff
+git add p1.py
+git commit -m "Update print message"
+git branch feature
+git switch feature
+Set-Content p1.py 'print("Hello from feature branch")'
+git add p1.py
+git commit -m "Add feature message"
+git switch master
+git merge feature
+git branch -M main
+git status
+git log --oneline
+
+
+GitHub repository and Git commands
+cd D:\devops
+git remote -v
+git branch
+git status
+git remote add origin https://github.com/24ituoz091-cloud/devops-experiment.git
+git branch -M main
+git push -u origin main
+git pull origin main
+git log --oneline
+git status
+Set-Content p1.py 'print("Hello from GitHub workflow")'
+git diff
+git add p1.py
+git commit -m "Update greeting message"
+git push origin main
+git status
+git add .
+git commit -m "Save changes"
+git log --oneline
+git branch
+git branch -a
+git remote -v
+git pull
+git push
+
+
+Docker images and containers
+docker --version
+docker info
+docker ps
+docker pull hello-world
+docker images
+docker run hello-world
+docker ps -a
+docker run --name mycontainer hello-world
+docker ps -a
+docker logs mycontainer
+docker start mycontainer
+docker logs mycontainer
+docker rm mycontainer
+docker ps -a
+
+
+Containerizing a Python application
+Set-Content p1.py 'print("Hello Students")'
+Create the Dockerfile
+@'
+FROM python:3.12
+WORKDIR /app
+COPY p1.py .
+CMD ["python", "p1.py"]
+'@ | Set-Content Dockerfile
+docker build -t my-python-app .
+docker images
+docker run --name python-container my-python-app
+docker ps -a
+docker logs python-container
+docker rm python-container
+
+Experiment 6 — Kubernetes orchestration
+
+kubectl version --client
+kubectl config get-contexts
+kubectl config use-context docker-desktop
+kubectl get nodes
+kubectl cluster-info
+kubectl get nodes
+kubectl get namespaces
+kubectl get pods --all-namespaces
+kubectl create deployment nginx --image=nginx
+kubectl get deployments
+kubectl get pods
+kubectl describe deployment nginx
+kubectl scale deployment nginx --replicas=2
+kubectl get deployments
+kubectl get pods
+kubectl delete deployment nginx
+kubectl get deployments
+kubectl get pods
+
+
+Experiment 7 — Jenkins installation and freestyle job
+
+docker ps
+docker start jenkins
+docker ps
+docker pull jenkins/jenkins:lts-jdk21
+docker logs jenkins
+docker ps
+
+Click Configure.
+Under Build Steps, select Execute shell.
+Enter:
+echo Hello from Jenkins
+lick Save.
+Click Build Now.
+Open the build number and click Console Output.
