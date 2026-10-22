@@ -1,0 +1,70 @@
+mkdir D:\GitHub-Practical
+cd D:\GitHub-Practical
+git init
+git config --global user.name "Aksh"
+git config --global user.email "24ituoz091@ddu.ac.in"
+
+InsertStudent.java
+@'
+public class InsertStudent {
+    public static void main(String[] args) {
+        System.out.println("Student inserted successfully");
+    }
+}
+'@ | Set-Content InsertStudent.java
+
+UpdateStudent.java
+@'
+public class UpdateStudent {
+    public static void main(String[] args) {
+        System.out.println("Student updated successfully");
+    }
+}
+'@ | Set-Content UpdateStudent.java
+
+DeleteStudent.java
+@'
+public class DeleteStudent {
+    public static void main(String[] args) {
+        System.out.println("Student deleted successfully");
+    }
+}
+'@ | Set-Content DeleteStudent.java
+
+SearchStudent.java
+@'
+public class SearchStudent {
+    public static void main(String[] args) {
+        System.out.println("Student found successfully");
+    }
+}
+'@ | Set-Content SearchStudent.java
+
+DisplayStudents.java
+@'
+public class DisplayStudents {
+    public static void main(String[] args) {
+        System.out.println("Displaying all students");
+    }
+}
+'@ | Set-Content DisplayStudents.java
+
+git branch -M main
+
+git add InsertStudent.java
+git commit -m "Add insert student functionality"
+
+git add UpdateStudent.java
+git commit -m "Add update student functionality"
+
+git add DeleteStudent.java
+git commit -m "Add delete student functionality"
+
+git add SearchStudent.java
+git commit -m "Add search student functionality"
+
+git add DisplayStudents.java
+git commit -m "Add display students functionality"
+
+git remote add origin https://github.com/YOUR-USERNAME/Student-Management-Practical.git
+git push -u origin main
